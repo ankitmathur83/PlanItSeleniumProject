@@ -1,0 +1,4 @@
+class Config:
+    CHROME_EXECUTABLE_PATH = ""
+    FIREFOX_EXECUTABLE_PATH = ""
+    BASE_URL = ""

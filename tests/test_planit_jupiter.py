@@ -39,7 +39,6 @@ def test_all_mandatory_fields(driver):
     contact_page.set_message("Today is a sunny Day.")
     header_text_after_entering_fields = contact_page.get_message_from_header()
     assert header_text_after_entering_fields == "We welcome your feedback - tell it how it is."
-    driver.quit()
 
 @allure.severity(allure.severity_level.NORMAL)
 def test_fill_contact_form_read_success_message(driver):
@@ -60,7 +59,6 @@ def test_fill_contact_form_read_success_message(driver):
     # verifying the success message after for is complete
     header_text_after_entering_fields = contact_page.get_message_from_header()
     assert header_text_after_entering_fields == "Thanks foo, we appreciate your feedback."
-    driver.quit()
 
 @allure.severity(allure.severity_level.CRITICAL)
 def test_add_products_in_cart(driver):
@@ -104,5 +102,4 @@ def test_add_products_in_cart(driver):
     home_page.navigate_to_shop_page()
     price_from_shop_page = shop.get_price_of_product_from_shop("Stuffed Frog")
     assert float(subtotal_from_cart) == quantity_from_cart * float(price_from_shop_page)
-    driver.quit()
 
